@@ -35,6 +35,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        toggle_gaming {
+            bindings = <&tog 6>;
+            key-positions = <37 38 39 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -95,6 +104,15 @@
 &trans  &trans  &bt BT_SEL 4  &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 0    &trans      &trans  &trans  &trans  &trans  &trans
                               &trans        &trans        &trans          &bt BT_CLR  &trans  &trans
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP    &none      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
             >;
         };
     };
