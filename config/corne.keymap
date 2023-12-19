@@ -7,6 +7,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&lt {
+    tapping-term-ms = <480>;
+};
+
 / {
     behaviors {
         mt_pref_tap: mt_pref_tap {
@@ -16,7 +20,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <550>;
+            tapping-term-ms = <480>;
         };
     };
 
