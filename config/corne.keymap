@@ -21,7 +21,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <400>;
+            tapping-term-ms = <250>;
         };
 
         mt_pref_tap_short: mt_pref_tap_short {
