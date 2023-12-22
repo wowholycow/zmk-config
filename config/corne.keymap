@@ -17,6 +17,15 @@
 
 / {
     behaviors {
+        mt_slower: mt_slower {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SLOWER";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+        };
     };
 
     combos {
@@ -39,10 +48,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q           &kp W           &kp E        &kp R             &kp T         &kp Y      &kp U              &kp I        &kp O       &kp P               &none
-&none  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G         &kp H      &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON  &none
-&none  &mt LCTRL Z     &kp X           &kp C        &kp V             &kp B         &kp N      &kp M              &kp COMMA    &kp DOT     &kp FSLH            &none
-                                       &none        &lt 4 ENTER       &lt 1 BSPC    &lt 2 TAB  &lt 3 SPACE        &none
+&none  &kp Q                  &kp W           &kp E        &kp R             &kp T         &kp Y      &kp U              &kp I        &kp O       &kp P               &none
+&none  &mt_slower LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G         &kp H      &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON  &none
+&none  &mt LCTRL Z            &kp X           &kp C        &kp V             &kp B         &kp N      &kp M              &kp COMMA    &kp DOT     &kp FSLH            &none
+                                              &none        &lt 4 ENTER       &lt 1 BSPC    &lt 2 TAB  &lt 3 SPACE        &none
             >;
         };
 
