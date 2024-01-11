@@ -37,6 +37,15 @@
         };
     };
 
+    macros {
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &kp TAB>;
+            label = "ALT_TAB";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -84,7 +93,7 @@
 
         num_layer {
             bindings = <
-&trans  &trans        &kp N7        &kp N8        &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &alt_tab      &kp N7        &kp N8        &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp ESC       &kp N4        &kp N5        &kp N6  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp N3  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans  &trans    &trans  &trans  &trans
