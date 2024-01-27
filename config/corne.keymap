@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
 
         toggle_gaming {
-            bindings = <&tog 0>;
+            bindings = <&tog 6>;
             key-positions = <37 38 39 40>;
         };
     };
