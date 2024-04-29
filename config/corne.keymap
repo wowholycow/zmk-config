@@ -24,6 +24,15 @@
             flavor = "tap-preferred";
             tapping-term-ms = <280>;
         };
+
+        tab_esc_td: tab_esc_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_ESC_TD";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESC>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -109,10 +118,10 @@
 
         gaming_layer {
             bindings = <
-&kp TAB    &trans  &trans  &trans     &trans       &trans                    &trans     &trans     &trans   &trans  &trans  &trans
-&kp LSHFT  &kp A   &kp S   &kp D      &kp F        &trans                    &trans     &trans     &trans   &trans  &trans  &trans
-&kp LCTRL  &trans  &trans  &trans     &trans       &trans                    &trans     &trans     &trans   &trans  &trans  &trans
-                           &kp SPACE  &lt 8 ENTER  &mt LEFT_ALT BACKSPACE    &lt 7 TAB  &kp SPACE  &kp ESC
+&tab_esc_td  &trans  &trans  &trans     &trans       &trans                    &trans     &trans     &trans   &trans  &trans  &trans
+&kp LSHFT    &kp A   &kp S   &kp D      &kp F        &trans                    &trans     &trans     &trans   &trans  &trans  &trans
+&kp LCTRL    &trans  &trans  &trans     &trans       &trans                    &trans     &trans     &trans   &trans  &trans  &trans
+                             &kp SPACE  &lt 8 ENTER  &mt LEFT_ALT BACKSPACE    &lt 7 TAB  &kp SPACE  &kp ESC
             >;
         };
 
