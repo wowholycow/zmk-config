@@ -30,8 +30,6 @@
             label = "TAB_ESC_TD";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp ESC>;
-
-            tapping-term-ms = <150>;
         };
     };
 
