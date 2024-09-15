@@ -40,6 +40,11 @@
             bindings = <&tog 6>;
             key-positions = <37 38 39 40>;
         };
+
+        toggle_fps_layer {
+            bindings = <&tog 7>;
+            key-positions = <0 24 11 35>;
+        };
     };
 
     macros {
