@@ -40,11 +40,6 @@
             bindings = <&tog 6>;
             key-positions = <37 38 39 40>;
         };
-
-        toggle_fps_layer {
-            bindings = <&tog 7>;
-            key-positions = <0 24 11 35>;
-        };
     };
 
     macros {
@@ -131,17 +126,8 @@
             bindings = <
 &tab_esc_td  &trans  &trans  &trans     &trans       &trans                    &trans     &trans     &trans   &trans  &trans  &trans
 &kp LSHFT    &kp A   &kp S   &kp D      &kp F        &trans                    &trans     &trans     &trans   &trans  &trans  &trans
-&kp LCTRL    &trans  &trans  &trans     &trans       &trans                    &trans     &trans     &trans   &trans  &trans  &trans
-                             &kp SPACE  &lt 9 ENTER  &mt LEFT_ALT BACKSPACE    &lt 8 TAB  &kp SPACE  &kp ESC
-            >;
-        };
-
-        gaming_layer_fps {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp LCTRL    &kp N1  &kp N2  &kp N3     &kp N4       &trans                    &trans     &trans     &trans   &trans  &trans  &trans
+                             &kp SPACE  &lt 8 ENTER  &mt LEFT_ALT BACKSPACE    &lt 7 TAB  &kp SPACE  &kp ESC
             >;
         };
 
