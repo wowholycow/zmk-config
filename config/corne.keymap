@@ -73,7 +73,7 @@
 &none  &kp Q                  &kp W           &kp E        &kp R             &kp T         &kp Y      &kp U              &kp I        &kp O       &kp P               &none
 &none  &mt_slower LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G         &kp H      &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON  &none
 &none  &mt LCTRL Z            &kp X           &kp C        &kp V             &kp B         &kp N      &kp M              &kp COMMA    &kp DOT     &kp FSLH            &none
-                                              &none        &lt 4 ENTER       &lt 1 BSPC    &lt 2 TAB  &lt 3 SPACE        &none
+                                              &none        &lt 3 ENTER       &lt 1 BSPC    &lt 2 TAB  &lt 4 SPACE        &none
             >;
         };
 
@@ -95,21 +95,21 @@
             >;
         };
 
-        sym_layer {
-            bindings = <
-&trans  &kp TILDE        &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &kp CARET    &kp DOLLAR     &kp AMPERSAND      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH   &trans
-&trans  &kp EXCLAMATION  &kp MINUS       &kp PLUS          &kp EQUAL  &kp GRAVE    &trans         &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &trans
-&trans  &kp PERCENT      &kp UNDERSCORE  &kp ASTERISK      &trans     &kp SLASH    &kp BACKSLASH  &kp SINGLE_QUOTE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT     &trans
-                                         &trans            &trans     &trans       &trans         &trans             &trans
-            >;
-        };
-
         num_layer {
             bindings = <
 &trans  &alt_tab      &kp N7        &kp N8        &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp ESC       &kp N4        &kp N5        &kp N6  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp N3  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        sym_layer {
+            bindings = <
+&trans  &kp TILDE        &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &kp CARET    &kp DOLLAR     &kp AMPERSAND      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH   &trans
+&trans  &kp EXCLAMATION  &kp MINUS       &kp PLUS          &kp EQUAL  &kp GRAVE    &trans         &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &trans
+&trans  &kp PERCENT      &kp UNDERSCORE  &kp ASTERISK      &trans     &kp SLASH    &kp BACKSLASH  &kp SINGLE_QUOTE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT     &trans
+                                         &trans            &trans     &trans       &trans         &trans             &trans
             >;
         };
 
@@ -136,7 +136,7 @@
         compatible = "zmk,conditional-layers";
 
         bluetooth {
-            if-layers = <4 1>;
+            if-layers = <3 1>;
             then-layer = <6>;
         };
     };
