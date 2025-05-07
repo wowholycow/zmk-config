@@ -31,6 +31,15 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp ESC>;
         };
+
+        lt_bspc_fun___morph_shift_tab: lt_bspc_fun___morph_shift_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LT_BSPC_FUN___MORPH_SHIFT_TAB";
+            bindings = <&lt 1 BSPC>, <&kp LS(TAB)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -39,11 +48,6 @@
         toggle_gaming {
             bindings = <&tog 5>;
             key-positions = <37 38 39 40>;
-        };
-
-        shift_tab {
-            bindings = <&shift_tab>;
-            key-positions = <16 38>;
         };
     };
 
@@ -62,14 +66,6 @@
 
             label = "ALT_TAB";
         };
-
-        shift_tab: shift_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LS(TAB)>;
-
-            label = "SHIFT_TAB";
-        };
     };
 
     keymap {
@@ -83,10 +79,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q                  &kp W           &kp E        &kp R             &kp T         &kp Y      &kp U              &kp I        &kp O       &kp P               &none
-&none  &mt_slower LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G         &kp H      &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON  &none
-&none  &mt LCTRL Z            &kp X           &kp C        &kp V             &kp B         &kp N      &kp M              &kp COMMA    &kp DOT     &kp FSLH            &none
-                                              &none        &lt 3 ENTER       &lt 1 BSPC    &lt 2 TAB  &lt 4 SPACE        &none
+&none  &kp Q                  &kp W           &kp E        &kp R             &kp T                             &kp Y      &kp U              &kp I        &kp O       &kp P               &none
+&none  &mt_slower LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                             &kp H      &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON  &none
+&none  &mt LCTRL Z            &kp X           &kp C        &kp V             &kp B                             &kp N      &kp M              &kp COMMA    &kp DOT     &kp FSLH            &none
+                                              &none        &lt 3 ENTER       &lt_bspc_fun___morph_shift_tab    &lt 2 TAB  &lt 4 SPACE        &none
             >;
         };
 
