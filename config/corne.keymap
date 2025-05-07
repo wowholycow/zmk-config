@@ -40,6 +40,11 @@
             bindings = <&tog 5>;
             key-positions = <37 38 39 40>;
         };
+
+        shift_tab {
+            bindings = <&shift_tab>;
+            key-positions = <16 38>;
+        };
     };
 
     macros {
@@ -56,6 +61,14 @@
                 <&kp LALT>;
 
             label = "ALT_TAB";
+        };
+
+        shift_tab: shift_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LS(TAB)>;
+
+            label = "SHIFT_TAB";
         };
     };
 
