@@ -124,7 +124,7 @@
 
         gaming_layer {
             bindings = <
-&tab_esc_td  &trans  &trans  &trans     &trans     &trans                    &trans    &trans     &trans   &trans     &trans  &sl 6
+&tab_esc_td  &trans  &trans  &trans     &trans     &trans                    &trans    &trans     &trans   &trans     &trans  &mo 6
 &kp LSHFT    &kp A   &kp S   &kp D      &kp F      &trans                    &kp LEFT  &kp DOWN   &kp UP   &kp RIGHT  &trans  &trans
 &kp LCTRL    &kp N1  &kp N2  &kp N3     &kp N4     &trans                    &trans    &trans     &trans   &trans     &trans  &trans
                              &kp SPACE  &kp ENTER  &mt LEFT_ALT BACKSPACE    &kp TAB   &kp SPACE  &kp ESC
@@ -133,10 +133,10 @@
 
         bluetooth_layer {
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &bt BT_CLR    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &bt BT_SEL 4  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans        &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &bt BT_CLR    &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &bt BT_SEL 4  &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans          &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans        &trans        &trans          &trans  &trans
             >;
         };
     };
